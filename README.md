@@ -1,0 +1,1 @@
+采用古早技术jsp，servlet开发，数据库采用mysql，使用tomcat服务器运行
