@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <context-param>
+        <param-name>uncheckedUrls</param-name>
+        <param-value>/login.jsp,/loginServlet,/register.jsp,/verityUserName,/userRegister</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>service.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserRegister</servlet-name>
+        <servlet-class>service.UserRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserRegister</servlet-name>
+        <url-pattern>/userRegister</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>VerityUserName</servlet-name>
+        <servlet-class>service.VerityUserName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerityUserName</servlet-name>
+        <url-pattern>/verityUserName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WarehouseServlet</servlet-name>
+        <servlet-class>service.WarehouseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WarehouseServlet</servlet-name>
+        <url-pattern>/warehouseServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>service.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>InsertWarehouse</servlet-name>
+        <servlet-class>service.InsertWarehouse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertWarehouse</servlet-name>
+        <url-pattern>/insertWarehouse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeviceServlet</servlet-name>
+        <servlet-class>service.DeviceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeviceServlet</servlet-name>
+        <url-pattern>/deviceServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>InsertDevice</servlet-name>
+        <servlet-class>service.InsertDevice</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertDevice</servlet-name>
+        <url-pattern>/insertDevice</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HistoryServlet</servlet-name>
+        <servlet-class>service.HistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryServlet</servlet-name>
+        <url-pattern>/historyServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
