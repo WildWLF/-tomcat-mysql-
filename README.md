@@ -1,1 +1,2 @@
-采用古早技术jsp，servlet开发，数据库采用mysql，使用tomcat服务器运行
+基于tomcat+mysql+servlet开发的仓库管理系统
+全都是上古技术，适用于学校要求古早技术开发的课程设计
